@@ -1,30 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Input</title>
-<style>
-.content {
-	margin: auto;
-	width: 300px;
-	border: 3px solid black;
-	padding: 10px;
-}
-
-.form-input {
-	padding-top: 10px;
-}
-
-img {
-	border: 1px solid black;
-}
-
-span {
-	width: 100px;
-}
-</style>
+<body>
 <script>
 	function reloadCaptcha() {
 		let element = document.getElementById("image");
@@ -32,8 +6,6 @@ span {
 		element.src = "CaptchaServlet?" + (new Date()).getTime().toString();
 	}
 </script>
-</head>
-<body>
 
 	<%@ page import="java.util.ArrayList"%>
 	<%@ page import="bussiness.CategoryEndpoint"%>
@@ -86,4 +58,3 @@ span {
 		</form>
 	</div>
 </body>
-</html>
