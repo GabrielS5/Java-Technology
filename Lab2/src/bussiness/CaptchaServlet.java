@@ -84,7 +84,7 @@ public class CaptchaServlet extends HttpServlet {
 	private String getRandomText() {
 		StringBuilder buffer = new StringBuilder(7);
 		for (int i = 0; i < 7; i++) {
-			if (random.nextBoolean()) {
+			if (random.nextInt(3) == 0) {
 				// number
 				int charNo = 48 + random.nextInt(57 - 48);
 				buffer.append((char) charNo);
@@ -112,7 +112,7 @@ public class CaptchaServlet extends HttpServlet {
 	private String getRandomFontName() {
 		// String[] fonts =
 		// GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
-		String[] fonts = { "Times new roman", "Tahoma", "Verdana", "Serif" };
+		String[] fonts = { "Times new roman", "Zapfino", "Serif", "Monaco", "Comic Sans MS", "Courier" };
 		return fonts[random.nextInt(fonts.length)];
 	}
 }
